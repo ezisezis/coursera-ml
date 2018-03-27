@@ -32,11 +32,11 @@ fprintf('Visualizing example dataset for PCA.\n\n');
 load ('ex7data1.mat');
 
 %  Visualize the example dataset
-plot(X(:, 1), X(:, 2), 'bo');
-axis([0.5 6.5 2 8]); axis square;
+%plot(X(:, 1), X(:, 2), 'bo');
+%axis([0.5 6.5 2 8]); axis square;
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 
 %% =============== Part 2: Principal Component Analysis ===============
@@ -55,17 +55,17 @@ fprintf('\nRunning PCA on example dataset.\n\n');
 
 %  Draw the eigenvectors centered at mean of data. These lines show the
 %  directions of maximum variations in the dataset.
-hold on;
-drawLine(mu, mu + 1.5 * S(1,1) * U(:,1)', '-k', 'LineWidth', 2);
-drawLine(mu, mu + 1.5 * S(2,2) * U(:,2)', '-k', 'LineWidth', 2);
-hold off;
+%hold on;
+%drawLine(mu, mu + 1.5 * S(1,1) * U(:,1)', '-k', 'LineWidth', 2);
+%drawLine(mu, mu + 1.5 * S(2,2) * U(:,2)', '-k', 'LineWidth', 2);
+%hold off;
 
-fprintf('Top eigenvector: \n');
-fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
-fprintf('\n(you should expect to see -0.707107 -0.707107)\n');
+%fprintf('Top eigenvector: \n');
+%fprintf(' U(:,1) = %f %f \n', U(1,1), U(2,1));
+%fprintf('\n(you should expect to see -0.707107 -0.707107)\n');
 
-fprintf('Program paused. Press enter to continue.\n');
-pause;
+%fprintf('Program paused. Press enter to continue.\n');
+%pause;
 
 
 %% =================== Part 3: Dimension Reduction ===================
@@ -76,11 +76,11 @@ pause;
 %
 %  You should complete the code in projectData.m
 %
-fprintf('\nDimension reduction on example dataset.\n\n');
+%fprintf('\nDimension reduction on example dataset.\n\n');
 
 %  Plot the normalized dataset (returned from pca)
-plot(X_norm(:, 1), X_norm(:, 2), 'bo');
-axis([-4 3 -4 3]); axis square
+%plot(X_norm(:, 1), X_norm(:, 2), 'bo');
+%axis([-4 3 -4 3]); axis square
 
 %  Project the data onto K = 1 dimension
 K = 1;

@@ -21,6 +21,22 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+for i=1:rows(X)
+    datapoint = X(i,:);
+    distance_between_points = -1;
+    for j=1:rows(centroids)
+        centroid = centroids(j,:);
+        # calculate distance and assign indexes
+        tmp_dist = norm(datapoint - centroid, 2);
+        if (j==1)
+            distance_between_points = tmp_dist;
+            idx(i) = j;
+        elseif (distance_between_points > tmp_dist)
+            distance_between_points = tmp_dist;
+            idx(i) = j;
+        endif 
+    endfor
+endfor
 
 
 
